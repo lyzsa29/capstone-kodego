@@ -1,0 +1,93 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="shortcut icon" href="images/capayang-logo.svg" type="imagex-icon">
+	<title>Capayang Admin</title> 
+	<link rel="stylesheet"
+		href="css/admin.css"> 
+	<link rel="stylesheet"
+		href="responsive.css"> 
+
+  
+  </head> 
+
+<body> 
+	
+	<!-- for header part -->
+	<header> 
+
+		<div class="logosec"> 
+			<div class="logo">CAPAYANG ADMIN</div> 
+			<img src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
+				class="icn menuicn"
+				id="menuicn"
+				alt="menu-icon"> 
+		</div> 
+
+		<div class="message"> 
+			<div class="dp"> 
+			<img src="images/capayang-logo.png" width="40" height="40"> 
+			</div> 
+		</div> 
+	</header> 
+
+	<div class="main-container"> 
+		<div class="navcontainer"> 
+			<nav class="nav"> 
+				<div class="nav-upper-options">
+
+					<div class="option2 nav-option"> 
+						<img width="50" height="60" src="https://img.icons8.com/glyph-neue/64/why-us-male.png" > 
+						<button id="reloadbutton" class="tablinks" onclick="openTab(event, 'Inquiries', fetchInquiries())">
+              <h3> Inquiry</h3>
+            </button>
+					</div> 
+
+					<div class="nav-option logout"> 
+						<img src="https://img.icons8.com/ios/50/logout-rounded-left.png" alt="logout-rounded-left" class="nav-img" alt="logout"/> 
+						<h3><a href="login.html">Logout</a></h3> 
+					</div> 
+
+				</div> 
+			</nav> 
+		</div> 
+		<div class="main"> 
+
+			
+			<div class="inquiry-container" class="tabcontent"> 
+				<div class="inquiry-header"> 
+					<h1 class="inquiry-heading">Client Inquiries</h1> 
+					<button class="refresh" id="reloadbutton" onclick="fetchInquiries()">Refresh</button> 
+				</div> 
+        <div class="inquiry-body"> 
+          <table id="inquiryTable">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Name</th>
+                    <th>Number</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Inquiry data will be dynamically inserted here  -->
+            </tbody>
+        </table>
+        </div>
+				</div> 
+			</div> 
+		</div> 
+	</div> 
+
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="js/admin.js"></script>
+</body> 
+</html>
